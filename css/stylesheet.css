@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: table;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.dice {
+    left: 65%;
+    position: fixed;
+    text-align: center;
+    top: 5%;
+    vertical-align: middle;
+}
+
+.dice img {
+    width: 100px;
+}
+
+input[type="checkbox"] {
+    height: 1.5em;
+    margin: auto 2.8em;
+    width: 1.5em;
+}
+
+input[type="radio"] {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.msg, .error {
+    color: #ff0000;
+}
+
+p {
+    font-size: 0.75em;
+}
+
+#scorebutton {
+    left: 40% !important;
+}
+table {
+    margin: 2.8% 5%;
+    position: fixed;
+}
+
+table p {
+    margin: 5px;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    height: 40px;
+    min-width: 60px;
+}
+
+#diceinput {
+    display: none;
+    position: fixed;
+    top: 90% ;
+}

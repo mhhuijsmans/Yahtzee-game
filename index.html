@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+    <link rel="shortcut icon" href="images/favicon.ico?v=2" />
+    <title>YAHTZEE!</title>
+</head>
+<body>
+    <div class="container">
+        <table id="scores">
+            <tr>
+                <td><p></p></td>
+                <th><p>Puntentelling</p></th>
+                <th><p>Score</p></th>
+                <td><p></p></td>
+                <th><p>Puntentelling</p></th>
+                <th><p>Score</p></th>
+            </tr>
+            <tr>
+                <th><input type="radio" id="enenradio" name="scoreoption"><label for="enenradio">Enen</label></th>
+                <td><p>Tel de enen</p></td>
+                <td class="scoretd" id="enenbox"></td>
+                <th><input type="radio" id="toakradio" name="scoreoption"><label for="toakradio">Three of a kind<br/>Drie dezelfde</label></th>
+                <td><p>Totaal v/d 5 stenen</p></td>
+                <td class="scoretd" id="toakbox"></td>
+            </tr>
+            <tr>
+                <th><input type="radio" id="tweeenradio" name="scoreoption"><label for="tweeenradio">Tweeën</label></th>
+                <td><p>Tel de tweeën</p></td>
+                <td class="scoretd" id="tweeenbox"></td>
+                <th><input type="radio" id="foakradio" name="scoreoption"><label for="foakradio">Four of a kind<br/>Vier dezelfde</label></th>
+                <td><p>Totaal v/d 5 stenen</p></td>
+                <td class="scoretd" id="foakbox"></td>
+            </tr>
+            <tr>
+                <th><input type="radio" id="drieenradio" name="scoreoption"><label for="drieenradio">Drieën</label></th>
+                <td><p>Tel de drieën</p></td>
+                <td class="scoretd" id="drieenbox"></td>
+                <th><input type="radio" id="fhradio" name="scoreoption"><label for="fhradio">Full House<br/>3 + 2 dezelfde</label></th>
+                <td><p>25 punten</p></td>
+                <td class="scoretd" id="fhbox"></td>
+            </tr>
+            <tr>
+                <th><input type="radio" id="vierenradio" name="scoreoption"><label for="vierenradio">Vieren</label></th>
+                <td><p>Tel de vieren</p></td>
+                <td class="scoretd" id="vierenbox"></td>
+                <th><input type="radio" id="ksradio" name="scoreoption"><label for="ksradio">Kleine straat<br/>4 opeenvolgende nummers</label></th>
+                <td><p>30 punten</p></td>
+                <td class="scoretd" id="ksbox"></td>
+            </tr>
+            <tr>
+                <th><input type="radio" id="vijvenradio" name="scoreoption"><label for="vijvenradio">Vijven</label></th>
+                <td><p>Tel de vijven</p></td>
+                <td class="scoretd" id="vijvenbox"></td>
+                <th><input type="radio" id="gsradio" name="scoreoption"><label for="gsradio">Grote straat<br/>5 opeenvolgende nummers</label></th>
+                <td><p>40 punten</p></td>
+                <td class="scoretd" id="gsbox"></td>
+            </tr>
+            <tr>
+                <th><input type="radio" id="zessenradio" name="scoreoption"><label for="zessenradio">Zessen</label></th>
+                <td><p>Tel de zessen</p></td>
+                <td class="scoretd" id="zessenbox"></td>
+                <th><input type="radio" id="yahtzeeradio" name="scoreoption"><label for="yahtzeeradio">Yahtzee <br/>5 dezelfde</label></th>
+                <td><p>50 punten</p></td>
+                <td class="scoretd" id="yahtzeebox"></td>
+            </tr>
+            <tr>
+                <th><p>Bonus</p></th>
+                <td><p>35<br/>Bij 63 of meer punten</p></td>
+                <td class="scoretdx" id="bonusbox"><p>0</p></td>
+                <th><input type="radio" id="chanceradio" name="scoreoption"><label for="chanceradio">Chance</label></th>
+                <td><p>Vrije keuze</p></td>
+                <td class="scoretd" id="chancebox"></td>
+            </tr>
+            <tr>
+                <th colspan="2"><p>Totaal linkerhelft</p></th>
+                <td class="scoretdx" id="linkerbox"><p>0</p></td>
+                <th colspan="2"><p>Totaal rechterhelft</p></th>
+                <td class="scoretdx" id="rechterbox"><p>0</p></td>
+            </tr>
+            <tr>
+                <th colspan="5"><p>Totaal beide helften</p><br/><input type="submit" id="scorebutton" value="Kies categorie"><p></p></th>
+                <td colspan="1" class="scoretdx"  id="totaalbox"><p>0</p></td>
+            </tr>
+        </table>
+
+
+        <div class="dice">
+        <img id="imgDice1" src="images/1.png" alt="">
+        <img id="imgDice2" src="images/2.png" alt="">
+        <img id="imgDice3" src="images/3.png" alt=""><br/><br/>
+        <input type="checkbox" id="checkDice1" name="dice">
+        <input type="checkbox" id="checkDice2" name="dice">
+        <input type="checkbox" id="checkDice3" name="dice"><br /><br />
+        <img id="imgDice4" src="images/4.png" alt="">
+        <img id="imgDice5" src="images/5.png" alt=""><br/><br/>
+        <input type="checkbox" id="checkDice4" name="dice">
+        <input type="checkbox" id="checkDice5" name="dice">
+
+        <br /><br /><br />
+
+        <input type="submit" id="rollbutton" value="Rol de dobbelstenen!">
+        <p class="msg"></p>
+        </div>
+
+    </div>
+
+<div id="diceinput">
+<input id="checkWaarde1" type="text">
+<input id="checkWaarde2" type="text">
+<input id="checkWaarde3" type="text">
+<input id="checkWaarde4" type="text">
+<input id="checkWaarde5" type="text">
+</div>
+
+   <script src="js/script.js"></script>
+</body>
+</html>
